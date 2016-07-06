@@ -12,6 +12,8 @@ Administration scripts and tools for LoopBack related projects.
 1. Run a command (ie. `lat-owners` will generate `owners.md` in the current
    dir).
 
+## Commands
+
 ### `lat-owners`
 
 Generate `owners.md` in the **current working directory** using the list from [`loopback-owners`](//github.com/strongloop/loopback-owners/blob/master/index.js).
