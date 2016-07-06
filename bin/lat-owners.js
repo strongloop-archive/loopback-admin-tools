@@ -123,7 +123,10 @@ fs.access(filePath, fs.F_OK, function(err) {
       });
 
       // print table footer
-      fs.appendFileSync(filePath, '\n</table>\n');
+      fs.appendFileSync(filePath, '\n</table>');
     }
   });
+
+  // to suppress git diff regarding no newline at EOF
+  fs.appendFileSync(filePath, '\n\n');
 });
