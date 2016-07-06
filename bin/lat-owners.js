@@ -11,12 +11,17 @@ fs.access(filePath, fs.F_OK, function(err) {
   if (!err)
     fs.truncateSync(filePath, 0);
 
+  // print generation info
+  var info = '> This file was generated via [`lat-owners`](//github.com/' +
+    'strongloop/loopback-admin-tools/blob/master/bin/lat-owners.js)';
+  fs.appendFileSync(filePath, info);
+
   groups.forEach(function(group, index) {
     // print title
-    var title = '';
-    if (index !== 0)
-      title += '\n\n'
-    title += '# ' + group.name;
+    // var title = '';
+    // if (index !== 0)
+    //   title += '\n\n'
+    var title = '\n\n# ' + group.name;
     fs.appendFileSync(filePath, title);
 
     if (group.subgroups) {
@@ -27,8 +32,9 @@ fs.access(filePath, fs.F_OK, function(err) {
         fs.appendFileSync(filePath, subgroupTitle);
 
         // print table header
-        var tableHeader = '\n\n<table>\n  <thead>\n    <tr>\n      <th width="100%" ' +
-          'align="left">Repo\n      <th>Owner\n      <th>Backup';
+        var tableHeader = '\n\n<table>\n  <thead>\n    <tr>\n      ' +
+          '<th width="100%" align="left">Repo\n      <th>Owner\n      ' +
+          '<th>Backup';
         fs.appendFileSync(filePath, tableHeader);
 
         // print table body
@@ -77,8 +83,9 @@ fs.access(filePath, fs.F_OK, function(err) {
       });
     } else {
       // print table header
-      var tableHeader = '\n\n<table>\n  <thead>\n    <tr>\n      <th width="100%" ' +
-        'align="left">Repo\n      <th>Owner\n      <th>Backup';
+      var tableHeader = '\n\n<table>\n  <thead>\n    <tr>\n      ' +
+        '<th width="100%" align="left">Repo\n      <th>Owner\n      ' +
+        '<th>Backup';
       fs.appendFileSync(filePath, tableHeader);
 
       // print table body
