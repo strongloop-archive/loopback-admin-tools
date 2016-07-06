@@ -1,5 +1,5 @@
 {
-  "name": "loopback-admin",
+  "name": "loopback-admin-tools",
   "version": "1.0.0",
   "description": "Administration scripts and tools for LoopBack related projects.",
   "main": "index.js",
@@ -8,21 +8,27 @@
     "test": "mocha",
     "posttest": "npm run lint"
   },
+  "bin": {
+    "lat-owners": "./bin/lat-owners.js"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strongloop/loopback-admin.git"
+    "url": "git+https://github.com/strongloop/loopback-admin-tools.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/strongloop/loopback-admin/issues"
+    "url": "https://github.com/strongloop/loopback-admin-tools/issues"
   },
-  "homepage": "https://github.com/strongloop/loopback-admin#readme",
+  "homepage": "https://github.com/strongloop/loopback-admin-tools#readme",
   "devDependencies": {
     "chai": "^3.5.0",
     "eslint": "^3.0.1",
     "eslint-config-loopback": "^4.0.0",
     "mocha": "^2.5.3"
+  },
+  "dependencies": {
+    "loopback-owners": "git+ssh://github.com/strongloop/loopback-owners.git"
   }
 }
