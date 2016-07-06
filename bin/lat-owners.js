@@ -123,7 +123,7 @@ fs.access(filePath, fs.F_OK, function(err) {
       });
 
       // print table footer
-      fs.appendFileSync(filePath, '\n</table>');
+      fs.appendFileSync(filePath, '\n</table>\n');
     }
   });
 });
