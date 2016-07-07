@@ -6,6 +6,8 @@ Administration scripts and tools for LoopBack related projects.
 
 > Until we publish this module to NPM, you can clone this repo locally and run
 `npm link` instead of `npm install -g loopback-admin-tools` to use this module.
+Remember to manually pull in the latest commit from `loopback-owners` (ie.
+remove `node_modules` and `npm install` again to refresh).
 
 1. Install this module globally (`npm install -g loopback-admin-tools`) to get
    a set of LoopBack administration related commands.
