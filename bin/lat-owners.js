@@ -13,7 +13,7 @@ fs.access(filePath, fs.F_OK, function(err) {
 
   // print generation info
   var info = '> This file was generated via [`lat-owners`](//github.com/' +
-    'strongloop/loopback-admin-tools/blob/master/bin/lat-owners.js)';
+    'strongloop/loopback-admin-tools#lat-owners)';
   fs.appendFileSync(filePath, info);
 
   groups.forEach(function(group, index) {
